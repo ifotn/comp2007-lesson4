@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label for="ddlDepartment" class="control-label col-sm-2">Department:</label>
-            <asp:DropDownList ID="ddlDepartment" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="ddlDepartment" runat="server" DataTextField="Name" DataValueField="DepartmentID"></asp:DropDownList>
         </div>
         <div class="col-sm-2 col-sm-offset-2">
             <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="btn btn-primary" />

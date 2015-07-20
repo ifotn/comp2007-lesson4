@@ -18,5 +18,8 @@ namespace lesson4.Models
         public int CourseID { get; set; }
         public int StudentID { get; set; }
         public Nullable<int> Grade { get; set; }
+    
+        public virtual Course Cours { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

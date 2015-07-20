@@ -9,18 +9,17 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
-
 namespace lesson4
 {
-    public partial class lesson4 : System.Web.UI.MasterPage
+    public partial class logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.User.Identity.IsAuthenticated)
-            {
-                plhPrivate.Visible = true;
-                plhPublic.Visible = false;
-            }
+            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            authenticationManager.SignOut();
+
+
+            Response.Redirect("~/login.aspx");
         }
     }
 }

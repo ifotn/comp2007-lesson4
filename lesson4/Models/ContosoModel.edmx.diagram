@@ -9,6 +9,9 @@
         <EntityTypeShape EntityType="ContosoModel.Department" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ContosoModel.Enrollment" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ContosoModel.Student" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="ContosoModel.FK_Courses_DepartmentID" />
+        <AssociationConnector Association="ContosoModel.FK_Enrollments_CourseID" />
+        <AssociationConnector Association="ContosoModel.FK_Enrollments_StudentID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
